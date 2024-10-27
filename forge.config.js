@@ -49,4 +49,17 @@ module.exports = {
     appleIdPassword: process.env.APPLEIDPASS,
     teamId: process.env.TEAMID,
   },
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'sandro-git',
+          name: 'my-electron-app'
+        },
+        prerelease: false,
+        draft: true
+      }
+    }
+  ]
 };
